@@ -33,7 +33,7 @@ const FeatureRow = ({ id, title, description }) => {
         <View>
             <TouchableOpacity className="mt-4 flex-row items-center justify-between px-4">
                 <Text className="font-bold text-lg">{title}</Text>
-                <ArrowRightIcon color="#00ccbb" />
+                <ArrowRightIcon color="#ecc716" />
             </TouchableOpacity>
             <Text className="text-xs text-gray-500 px-4">{description}</Text>
             <ScrollView

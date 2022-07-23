@@ -44,9 +44,9 @@ const RestaurantCard = ({
             <View className="px-3 pb-4 space-y-1">
                 <Text className="font-bold text-lg pt-2">{title}</Text>
                 <View className="flex-row items-center space-x-1">
-                    <StarIcon color="lightgreen" size={22} />
+                    <StarIcon color="#ecc716" size={22} />
                     <Text className="text-gray-500 text-xs">
-                        <Text className="text-green-500">{rating}</Text> •{' '}
+                        <Text className="text-yellow-500">{rating}</Text> •{' '}
                         {genre}
                     </Text>
                 </View>

@@ -18,7 +18,7 @@ const DeliveryScreen = () => {
     const restaurant = useSelector(selectRestaurant);
 
     return (
-        <View className="bg-[#00ccbb] flex-1">
+        <View className="bg-[#ecc716] flex-1">
             <SafeAreaView className="z-50">
                 <View className="flex-row justify-between items-center p-5">
                     <TouchableOpacity
@@ -49,7 +49,7 @@ const DeliveryScreen = () => {
                     </View>
                     <Progress.Bar
                         size={30}
-                        color="#00ccbb"
+                        color="#ecc716"
                         indeterminate={true}
                     />
                     <Text className="mt-3 text-gray-500">
@@ -89,7 +89,7 @@ const DeliveryScreen = () => {
                     <Text className="text-lg">Bojan Angjeleski</Text>
                     <Text className="text-gray-400">Your Rider</Text>
                 </View>
-                <Text className="text-[#00ccbb] text-lg mr-5 font-bold">
+                <Text className="text-[#ecc716] text-lg mr-5 font-bold">
                     Call
                 </Text>
             </SafeAreaView>

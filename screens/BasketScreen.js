@@ -35,12 +35,13 @@ const BasketScreen = () => {
         setGroupedItemsInBasket(groupedItems);
     }, [items]);
 
-    // if (Object.keys(groupedItems).length === 0) return null;
-
+    if (items.length === 0 && navigation.canGoBack()) {
+        navigation.goBack();
+    }
     return (
         <SafeAreaView className="flex-1 bg-white">
             <View className="flex-1 bg-gray-50">
-                <View className="p-5 border-b border-[#00ccbb] bg-white shadow">
+                <View className="p-5 border-b border-[#ecc716] bg-white shadow">
                     <View>
                         <Text className="text-lg font-bold text-center">
                             Basket
@@ -53,7 +54,7 @@ const BasketScreen = () => {
                         onPress={navigation.goBack}
                         className="rounded-full bg-gray-100 absolute top-4 right-5"
                     >
-                        <XCircleIcon color="#00ccbb" size={50} />
+                        <XCircleIcon color="#ecc716" size={50} />
                     </TouchableOpacity>
                 </View>
                 <View className="flex-row items-center space-x-4 px-4 py-3 bg-white my-5">
@@ -65,7 +66,7 @@ const BasketScreen = () => {
                     />
                     <Text className="flex-1">Deliver in 50-75 min</Text>
                     <TouchableOpacity>
-                        <Text className="text-[#00ccbb]">Change</Text>
+                        <Text className="text-[#ecc716]">Change</Text>
                     </TouchableOpacity>
                 </View>
                 <ScrollView className="divide-y divide-gray-200">
@@ -75,7 +76,7 @@ const BasketScreen = () => {
                                 key={key}
                                 className="flex-row items-center space-x-3 bg-white py-2 px-5"
                             >
-                                <Text className="text-[#00ccbb]">
+                                <Text className="text-[#ecc716]">
                                     {items.length} x
                                 </Text>
                                 <Image
@@ -96,7 +97,7 @@ const BasketScreen = () => {
                                         dispatch(removeFromBasket({ id: key }))
                                     }
                                 >
-                                    <Text className="text-[#00ccbb] text-xs">
+                                    <Text className="text-[#ecc716] text-xs">
                                         remove
                                     </Text>
                                 </TouchableOpacity>
@@ -129,7 +130,7 @@ const BasketScreen = () => {
                     </View>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('PreparingOrder')}
-                        className="rounded-lg bg-[#00ccbb] p-4"
+                        className="rounded-lg bg-[#ecc716] p-4"
                     >
                         <Text className="text-center text-white text-lg font-bold">
                             Place Order

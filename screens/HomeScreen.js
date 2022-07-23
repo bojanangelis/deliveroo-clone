@@ -57,10 +57,10 @@ const HomeScreen = () => {
                     </Text>
                     <Text className="font-bold text-lg">
                         Current Location{' '}
-                        <ChevronDownIcon size={20} color="#00ccbb" />
+                        <ChevronDownIcon size={20} color="#ecc716" />
                     </Text>
                 </View>
-                <UserIcon size={28} color="#00ccbb" />
+                <UserIcon size={28} color="#ecc716" />
             </View>
             <View className="flex-row items-center space-x-2 pb-2 mx-4">
                 <View className="flex-row space-x-2 flex-1 bg-gray-100 p-3 rounded-lg">
@@ -70,7 +70,7 @@ const HomeScreen = () => {
                         keyboardType="default"
                     />
                 </View>
-                <AdjustmentsIcon color="#00ccbb" />
+                <AdjustmentsIcon color="#ecc716" />
             </View>
             <ScrollView
                 showsVerticalScrollIndicator={false}
