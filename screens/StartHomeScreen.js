@@ -11,7 +11,7 @@ const StartHomeScreen = () => {
     useEffect(() => {
         setTimeout(() => {
             navigation.navigate('Home');
-        }, 5000);
+        }, 4000);
     }, []);
 
     return (

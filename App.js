@@ -9,6 +9,9 @@ import BasketScreen from './screens/BasketScreen';
 import PreparingOrderScreen from './screens/PreparingOrderScreen';
 import DeliveryScreen from './screens/DeliveryScreen';
 import StartHomeScreen from './screens/StartHomeScreen';
+import LocationScreen from './screens/LocationScreen';
+import OrderHelpScreen from './screens/OrderHelpScreen';
+import GroceryScreen from './screens/GroceryScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +30,14 @@ export default function App() {
                             }}
                         />
                         <Stack.Screen name="Home" component={HomeScreen} />
+                        <Stack.Screen
+                            name="Location"
+                            component={LocationScreen}
+                            options={{
+                                presentation: 'modal',
+                                headerShown: false,
+                            }}
+                        />
                         <Stack.Screen
                             name="Restaurant"
                             component={RestaurantScreen}
@@ -50,6 +61,22 @@ export default function App() {
                         <Stack.Screen
                             name="Delivery"
                             component={DeliveryScreen}
+                            options={{
+                                presentation: 'fullScreenModal',
+                                headerShown: false,
+                            }}
+                        />
+                        <Stack.Screen
+                            name="OrderHelp"
+                            component={OrderHelpScreen}
+                            options={{
+                                presentation: 'modal',
+                                headerShown: false,
+                            }}
+                        />
+                        <Stack.Screen
+                            name="Grocery"
+                            component={GroceryScreen}
                             options={{
                                 presentation: 'fullScreenModal',
                                 headerShown: false,

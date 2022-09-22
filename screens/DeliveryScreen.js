@@ -26,7 +26,10 @@ const DeliveryScreen = () => {
                     >
                         <XIcon size={30} color="white" />
                     </TouchableOpacity>
-                    <Text className="font-light text-white text-lg">
+                    <Text
+                        onPress={() => navigation.navigate('OrderHelp')}
+                        className="font-light text-white text-lg"
+                    >
                         Order Help
                     </Text>
                 </View>
@@ -40,19 +43,14 @@ const DeliveryScreen = () => {
                                 45-55 Minutes
                             </Text>
                         </View>
-                        <Image
-                            source={{
-                                uri: 'https://links.papareact.com/fls',
-                            }}
-                            className="h-20 w-20"
-                        />
                     </View>
                     <Progress.Bar
                         size={30}
                         color="#ecc716"
                         indeterminate={true}
+                        className="mt-1"
                     />
-                    <Text className="mt-3 text-gray-500">
+                    <Text className="mt-4 text-gray-500">
                         Your order at {restaurant.title} is being prepared
                     </Text>
                 </View>

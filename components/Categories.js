@@ -1,4 +1,4 @@
-import { ScrollView } from 'react-native';
+import { ScrollView, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import CategoryCard from './CategoryCard';
 import sanityClient, { urlFor } from '../sanity';

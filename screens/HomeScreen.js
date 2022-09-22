@@ -5,6 +5,7 @@ import {
     Image,
     TextInput,
     ScrollView,
+    TouchableOpacity,
 } from 'react-native';
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
@@ -17,6 +18,7 @@ import {
 import Categories from '../components/Categories';
 import FeatureRow from '../components/FeatureRow';
 import sanityClient from '../sanity';
+import { LocationMarkerIcon } from 'react-native-heroicons/outline';
 
 const HomeScreen = () => {
     const navigation = useNavigation();
@@ -47,18 +49,30 @@ const HomeScreen = () => {
     return (
         <SafeAreaView className="bg-white flex-1">
             <View className="flex-row items-start pt-2 mx-4 my-3 space-x-2">
-                <Image
-                    source={{ uri: 'https://links.papareact.com/wru' }}
-                    className="h-7 w-7 bg-gray-300 p-4 rounded-full"
-                />
-                <View className="flex-1">
-                    <Text className="font-bold text-gray-400 text-xs">
-                        Deliver Now!
-                    </Text>
-                    <Text className="font-bold text-lg">
-                        Current Location{' '}
-                        <ChevronDownIcon size={20} color="#ecc716" />
-                    </Text>
+                <View className="flex-1 flex-row">
+                    <LocationMarkerIcon
+                        width={28}
+                        height={28}
+                        color={'#ecc716'}
+                    />
+                    <View className="ml-2">
+                        <Text className="font-bold text-gray-400 text-xs">
+                            Deliver Now!
+                        </Text>
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate('Location')}
+                        >
+                            <View>
+                                <Text className="font-bold text-lg">
+                                    Current Location{' '}
+                                    <ChevronDownIcon
+                                        size={20}
+                                        color="#ecc716"
+                                    />
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
                 </View>
                 <UserIcon size={28} color="#ecc716" />
             </View>
